@@ -6,11 +6,11 @@ This is the landing page of natural park
 <br/>
 
 ## **Project information**:
-🧪 Domain: naturalpark.com.ar | naturalpark.netlify.app
+🧪 Domain: [naturalpark.com.ar](https://www.naturalpark.com.ar/) | [naturalpark.netlify.app](https://naturalpark.netlify.app/)
 <br/>
 🔮 Hosting: Netlify
 <br/>
-☁ CI: This project displays continuously when you click on the main branch
+☁ CI: This project displays continuously when you push on the main or master branch
 
 
 ## **How to run the project**
