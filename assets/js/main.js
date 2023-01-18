@@ -1,9 +1,3 @@
-/**
-* Template Name: TheEvent - v2.2.0
-* Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 !(function($) {
   "use strict";
 
@@ -56,7 +50,7 @@
 
   // Mobile Navigation
   if ($('#nav-menu-container').length) {
-    var $mobile_nav = $('#nav-menu-container').clone().prop({
+    const $mobile_nav = $('#nav-menu-container').clone().prop({
       id: 'mobile-nav'
     });
     $mobile_nav.find('> ul').attr({
@@ -81,7 +75,7 @@
     });
 
     $(document).click(function(e) {
-      var container = $("#mobile-nav, #mobile-nav-toggle");
+      const container = $("#mobile-nav, #mobile-nav-toggle");
       if (!container.is(e.target) && container.has(e.target).length === 0) {
         if ($('body').hasClass('mobile-nav-active')) {
           $('body').removeClass('mobile-nav-active');
@@ -95,17 +89,17 @@
   }
 
   // Smooth scroll for the navigation menu and links with .scrollto classes
-  var scrolltoOffset = $('#header').outerHeight() - 21;
+  const scrolltoOffset = $('#header').outerHeight() - 21;
   if (window.matchMedia("(max-width: 991px)").matches) {
     scrolltoOffset += 20;
   }
   $(document).on('click', '.nav-menu a, #mobile-nav a, .scrollto', function(e) {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
+      const target = $(this.hash);
       if (target.length) {
         e.preventDefault();
 
-        var scrollto = target.offset().top - scrolltoOffset;
+        const scrollto = target.offset().top - scrolltoOffset;
 
         if ($(this).attr("href") == '#header') {
           scrollto = 0;
@@ -133,9 +127,9 @@
   // Activate smooth scroll on page load with hash links in the url
   $(document).ready(function() {
     if (window.location.hash) {
-      var initial_nav = window.location.hash;
+      const initial_nav = window.location.hash;
       if ($(initial_nav).length) {
-        var scrollto = $(initial_nav).offset().top - scrolltoOffset;
+        const scrollto = $(initial_nav).offset().top - scrolltoOffset;
         $('html, body').animate({
           scrollTop: scrollto
         }, 1500, 'easeInOutExpo');
@@ -144,14 +138,14 @@
   });
 
   // Navigation active state on scroll
-  var nav_sections = $('section');
-  var main_nav = $('.nav-menu, #mobile-nav');
+  const nav_sections = $('section');
+  const main_nav = $('.nav-menu, #mobile-nav');
 
   $(window).on('scroll', function() {
-    var cur_pos = $(this).scrollTop() + 200;
+    const cur_pos = $(this).scrollTop() + 200;
 
     nav_sections.each(function() {
-      var top = $(this).offset().top,
+      const top = $(this).offset().top,
         bottom = top + $(this).outerHeight();
 
       if (cur_pos >= top && cur_pos <= bottom) {
@@ -190,9 +184,9 @@
 
   // Buy tickets select the ticket type on click
   $('#buy-ticket-modal').on('show.bs.modal', function(event) {
-    var button = $(event.relatedTarget);
-    var ticketType = button.data('ticket-type');
-    var modal = $(this);
+    const button = $(event.relatedTarget);
+    const ticketType = button.data('ticket-type');
+    const modal = $(this);
     modal.find('#ticket-type').val(ticketType);
   });
 
